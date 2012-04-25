@@ -92,11 +92,12 @@ class Scanner {
         inc++;
       }
     }
+    /*
     int derp = (ceil((yMax-yMin)/yStep))*(ceil((xMax-xMin)/xStep));
     println("derp " + derp);
     println("greyValues " + greyValues.length);
     println("inc " + inc);
-    println("first color " + binary(greyValues[0]));
+    println("first color " + binary(greyValues[0]));//*/
 
   }
   
