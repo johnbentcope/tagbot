@@ -4,6 +4,7 @@ import processing.video.*;
 
 /*** INSTANTIALIZINATE SOME OBJECTS ***/
 Capture myCapture;
+Blob[][]  grid;
 
 /*** Global vars... Probably too many of these
  * TODO: trim global vars and objectify the code. ***/
@@ -35,7 +36,7 @@ void setup() {
   rectMode(CORNERS);
   ellipseMode(CENTER);
   myCapture = new Capture(this, width, height, 30);
-  grid = new Grid();
+
   scanner = new Scanner();
   printer = new Printer();
 }

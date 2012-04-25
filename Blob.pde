@@ -16,5 +16,8 @@ class Blob {
     return 7;
   }
   
+  void setColor(Blob blob, color blobColor) {
+    blob.
+  }
   
 }
