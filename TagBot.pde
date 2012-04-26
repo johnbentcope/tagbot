@@ -3,42 +3,16 @@
 import processing.video.*;
 
 /*** INSTANTIALIZINATE SOME OBJECTS ***/
-Capture myCapture;
-Blob[][]  grid;
+
 
 /*** Global vars... Probably too many of these
  * TODO: trim global vars and objectify the code. ***/
-int wig= 600;
-int hig = 600;
-int step = 20;
-int diam = 12;
-  
-int xStep = 2;
-int yStep = 10;
-  
-int yMin = step;
-int xMin = yMin;
-  
-int yMax = hig-step;
-int xMax = wig-step;
 
-int fieldSize = ((yMax-yMin)/yStep)*((xMax-xMin)/xStep);
 
-int[] greyValues = new int[fieldSize];
-
-int mainFlop = 0;  
-Scanner scanner;
-Printer printer;
+/*** This is where the magic happens... the first time ***/
 void setup() {
-  //img = loadImage("zelda.png");
-  size(wig, hig);
-  //colorMode(HSB);
-  rectMode(CORNERS);
-  ellipseMode(CENTER);
-  myCapture = new Capture(this, width, height, 30);
-
-  scanner = new Scanner();
-  printer = new Printer();
+  size(600, 600);
+  
 }
 
 
@@ -65,7 +39,6 @@ void draw() {
     // starting state for application and fallback
     // Imports webcam capture and pushes contrast to extremes
     case 3:
-      printer.displayGrid();
       break;
     default:
       background(0);

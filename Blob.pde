@@ -1,23 +1,27 @@
 class Blob {
   
-  int blobsWide() {
-    return 7;
+  int xBlobPos() {
+    return -1;
   }
   
-  int blobsHigh() {
-    return 7;
+  int xPixelPos() {
+    return -1;
   }
   
-  int pixelsWide() {
-    return 7;
+  int yBlobPos() {
+    return -1;
   }
   
-  int pixelsHigh() {
-    return 7;
+  int yPixelPos() {
+    return -1;
+  }
+  
+  color getBlobColor(Blob blob){
+    return color(255, 0, 126);
   }
   
   void setColor(Blob blob, color blobColor) {
-    blob.
+
   }
   
 }
