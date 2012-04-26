@@ -8,7 +8,6 @@ class Scanner {
   int flip = 0;
   
   Scanner() { 
-    
   }
   
   boolean update() {
@@ -68,9 +67,9 @@ class Scanner {
         color splat = pixels[ i*width + j ];
         int splatAvg = floor((red(splat)+green(splat)+blue(splat))/3);
         if (splatAvg > 150) {
-          greyValues[inc] = color(255);
+          setColor(grid[i][j], color(255));
         } else {
-          greyValues[inc] = color(0);
+          grid[i][j] = color(0);
         }
         pixels[ i*width + j ] = greyValues[inc];
         inc++;
@@ -92,11 +91,14 @@ class Scanner {
         inc++;
       }
     }
+    
+    println(grid.length);
+    /*
     int derp = (ceil((yMax-yMin)/yStep))*(ceil((xMax-xMin)/xStep));
     println("derp " + derp);
     println("greyValues " + greyValues.length);
     println("inc " + inc);
-    println("first color " + binary(greyValues[0]));
+    println("first color " + binary(greyValues[0]));//*/
 
   }
   

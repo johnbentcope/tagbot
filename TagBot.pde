@@ -1,6 +1,13 @@
+/*** IMPORTE LAS BIBLIOTECAS ***/
 //PImage img;
 import processing.video.*;
+
+/*** INSTANTIALIZINATE SOME OBJECTS ***/
 Capture myCapture;
+Blob[][]  grid;
+
+/*** Global vars... Probably too many of these
+ * TODO: trim global vars and objectify the code. ***/
 int wig= 600;
 int hig = 600;
 int step = 20;
@@ -32,6 +39,7 @@ void setup() {
   rectMode(CORNERS);
   ellipseMode(CENTER);
   myCapture = new Capture(this, width, height, 30);
+
   scanner = new Scanner();
   printer = new Printer();
 }
@@ -43,7 +51,7 @@ void draw() {
   // 0 is webcam capture
   // 1 freezes capture and analyzes the frame
   // 2 displays the capture grid
-  
+  //println(grid.blobsWide());
   switch(mainFlop){
     
     // freeze capture and put the contents of the frame into Scanner's greyValues[];
