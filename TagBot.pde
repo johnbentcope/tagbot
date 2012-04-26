@@ -24,7 +24,8 @@ void setup() {
   previewBox = new PreviewBox(prevMargin, prevMargin,
                               width-prevMargin, height-prevMargin);
   canvas = new Canvas(60, 90, 30);
-  blob = new Blob();
+  blob = new Blob(canvas.blobWide, canvas.blobHigh);
+  println(blob.copyBlobs().length);
 }
 
 

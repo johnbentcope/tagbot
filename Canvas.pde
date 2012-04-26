@@ -16,12 +16,21 @@ class Canvas {
   int fieldX = wide-marginXmin*2;
   int fieldY = high-marginYmin*2;
   
-  
+  int blobWide = fieldX/spacingX;
+  int blobHigh = fieldY/spacingY;
   
   Canvas(int tempwide, int temphigh, int tempelevation) {
     wide = tempwide;
     high = temphigh;
     elevation = tempelevation;  //distance below motor horizonal paper begins
+  }
+  
+  public int getBlobWide() {
+    return blobWide;
+  }
+  
+  public int getBlobHigh() {
+    return blobHigh;
   }
   
   private void stretchCanvas() {

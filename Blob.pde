@@ -1,9 +1,13 @@
 class Blob {
   
-  int[][] blobs = new int[0][0];
   
-  Blob() {
-    println(blobs);
+  
+  Blob(int blobWide, int blobHigh) {
+    int[][] blobs = new int[blobWide][blobHigh];
+  }
+
+  public int[][] copyBlobs(){
+    return blobs;
   }
   
   int xBlobPos() {
