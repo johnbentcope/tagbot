@@ -6,7 +6,7 @@ class PreviewBox {
   int xMax = width-30;
   int yMax = height-30;
   
-  PreviewBox([int tempxMin], [int tempyMin], [int tempxMax], [int tempyMax]) {
+  PreviewBox(int tempxMin, int tempyMin, int tempxMax, int tempyMax) {
     xMin = tempxMin;
     yMin = tempyMin;
     xMax = tempxMax;
@@ -15,6 +15,22 @@ class PreviewBox {
   
   void makeIt(){
     rect(xMin, yMin, xMax, yMax);
+  }
+  
+  int xMin() {
+    return xMin;
+  }
+  
+  int xMax() {
+    return xMin;
+  }
+  
+  int yMin() {
+    return xMin;
+  }
+  
+  int yMax() {
+    return xMin;
   }
   
 }
