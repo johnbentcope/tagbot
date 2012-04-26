@@ -1,5 +1,5 @@
 /*** IMPORTE LAS BIBLIOTECAS ***/
-//PImage img;
+//PImage img; 
 import processing.video.*;
 
 /*** INSTANTIALIZINATE SOME OBJECTS ***/
