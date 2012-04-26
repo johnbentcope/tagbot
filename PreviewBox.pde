@@ -17,19 +17,19 @@ class PreviewBox {
     rect(xMin, yMin, xMax, yMax);
   }
   
-  int xMin() {
+  public int xMin() {
     return xMin;
   }
   
-  int xMax() {
+  public int xMax() {
     return xMin;
   }
   
-  int yMin() {
+  public int yMin() {
     return xMin;
   }
   
-  int yMax() {
+  public int yMax() {
     return xMin;
   }
   

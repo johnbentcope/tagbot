@@ -12,4 +12,8 @@ class Canvas {
     elevation = tempelevation;  //distance below motor horizonal paper begins
   }
   
+  private stretchCanvas() {
+    
+  }
+  
 }
