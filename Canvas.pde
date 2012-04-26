@@ -4,7 +4,19 @@ class Canvas {
   // Approximately 2' by 3'
   int wide = 60;
   int high = 90;
+  
   int elevation = 30;
+  
+  int spacingX = 4;
+  int spacingY = 5;
+  
+  int marginXmin = 4;
+  int marginYmin = 5;
+  
+  int fieldX = wide-marginXmin*2;
+  int fieldY = high-marginYmin*2;
+  
+  
   
   Canvas(int tempwide, int temphigh, int tempelevation) {
     wide = tempwide;
@@ -12,7 +24,7 @@ class Canvas {
     elevation = tempelevation;  //distance below motor horizonal paper begins
   }
   
-  private stretchCanvas() {
+  private void stretchCanvas() {
     
   }
   

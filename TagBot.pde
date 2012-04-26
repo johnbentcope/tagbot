@@ -5,6 +5,7 @@ import processing.video.*;
 /*** INSTANTIALIZINATE SOME OBJECTS ***/
 PreviewBox previewBox;
 Canvas canvas;
+Blob blob;
 
 int prevMargin = 50; //makes setting margins simpler
 
@@ -23,7 +24,7 @@ void setup() {
   previewBox = new PreviewBox(prevMargin, prevMargin,
                               width-prevMargin, height-prevMargin);
   canvas = new Canvas(60, 90, 30);
-  
+  blob = new Blob();
 }
 
 

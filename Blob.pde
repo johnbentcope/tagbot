@@ -1,5 +1,11 @@
 class Blob {
   
+  int[][] blobs = new int[0][0];
+  
+  Blob() {
+    println(blobs);
+  }
+  
   int xBlobPos() {
     return -1;
   }
