@@ -5,15 +5,18 @@ int wig= 600;
 int hig = 600;
 int step = 20;
 int diam = 12;
-  
+
 int xStep = 2;
 int yStep = 10;
-  
 int yMin = step;
 int xMin = yMin;
-  
+
 int yMax = hig-step;
 int xMax = wig-step;
+
+int xSteps = (xMax-xMin)/xStep;
+int ySteps = (yMax-yMin)/yStep;
+
 
 int fieldSize = ((yMax-yMin)/yStep)*((xMax-xMin)/xStep);
 
