@@ -65,7 +65,7 @@ void draw() {
     // starting state for application and fallback
     // Imports webcam capture and pushes contrast to extremes
     case 3:
-      printer.displayGrid();
+      //printer.displayGrid();
       break;
     default:
       background(0);

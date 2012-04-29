@@ -17,7 +17,7 @@ class Blob {
   }
   
   void setColor(Blob blob, color blobColor) {
-    blob.
+
   }
   
 }

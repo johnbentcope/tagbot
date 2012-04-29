@@ -65,11 +65,12 @@ class Scanner {
     for ( int i = yMin; i < yMax; i += yStep ) {
       for ( int j = xMin; j < xMax; j += xStep ) {
         color splat = pixels[ i*width + j ];
+        println(hue(splat));
         int splatAvg = floor((red(splat)+green(splat)+blue(splat))/3);
         if (splatAvg > 150) {
-          setColor(grid[i][j], color(255));
-        } else {
-          grid[i][j] = color(0);
+          grid[i][j].setColor(grid[i][j], color(255));
+        } else {  
+          grid[i][j].setColor(grid[i][j], color(0));
         }
         pixels[ i*width + j ] = greyValues[inc];
         inc++;
@@ -104,13 +105,6 @@ class Scanner {
   
   void run() {
     
-    
-    setGrid();
-    
-    if (update()) {
-      //render();
-    } else {
-      //ellipse(xPos, yPos-step, 2, diam); 
-    }
+
   }
 }
