@@ -16,33 +16,12 @@ int prevMargin = 50; //makes setting margins simpler
 
 /*** Global vars... Probably too many of these
  * TODO: trim global vars and objectify the code. ***/
-<<<<<<< HEAD
-=======
-int wig= 600;
-int hig = 600;
-int step = 20;
-int diam = 12;
-
-int xStep = 2;
-int yStep = 10;
-int yMin = step;
-int xMin = yMin;
-
-int yMax = hig-step;
-int xMax = wig-step;
-
-int xSteps = (xMax-xMin)/xStep;
-int ySteps = (yMax-yMin)/yStep;
-
-
-int fieldSize = ((yMax-yMin)/yStep)*((xMax-xMin)/xStep);
->>>>>>> 851c63a07e56dc08225ef2ab16ce37e2cf94de3f
 
 
 void setup() {
   size(600, 600);
   rectMode(1);
-  noFill();
+  noFill(); 
   
   webcam = new Capture(this, width, height, 30);
   

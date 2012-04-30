@@ -12,7 +12,7 @@ class Scanner {
 
   public void render() {
 
-  }
+  } 
 
   public PImage getWebcam(PImage webcam) {
     return webcam;
