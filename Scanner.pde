@@ -5,29 +5,19 @@ class Scanner {
   Scanner() {
   }
 
-  boolean update() {
-
-
-
+  private boolean update() {
     return true;
   }
 
 
-  void render() {
-
-
-  }
-
-  void setGrid() {
+  public void render() {
 
   }
 
-  void displayGrid() {
+  public PImage getWebcam(PImage webcam) {
+    return webcam;
   }
-
-  void run() {
-
-
-  }
+  
+  
 }
 
