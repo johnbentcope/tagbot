@@ -17,7 +17,7 @@ int motorSpan = 500; // width between motors in centimeters
 
 void setup() {
   size(600, 600);
-  rectMode(CORNERS);
+  rectMode(1);
   noFill();
   
   // PreviewBox ( int xMin, int yMin, int xMax, int yMax);
