@@ -1,6 +1,5 @@
 class Scanner {
 
-  
 
 
   Scanner() {
@@ -27,6 +26,7 @@ class Scanner {
   }
 
   void run() {
+
 
   }
 }
