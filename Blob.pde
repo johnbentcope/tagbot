@@ -1,9 +1,9 @@
 class Blob {
   
-  
+   int[][] blobs =null;
   
   Blob(int blobWide, int blobHigh) {
-    int[][] blobs = new int[blobWide][blobHigh];
+    blobs = new int[blobWide][blobHigh];
   }
 
   public int[][] copyBlobs(){
