@@ -22,7 +22,7 @@ void setup() {
   size(600, 600);
   rectMode(1);
   noFill(); 
-  
+  frameRate(30);
   webcam = new Capture(this, width, height, 30);
   
   imgBase = new PImage(width, height);
@@ -44,8 +44,8 @@ void setup() {
 
 void draw() {
   background(0);
-  image(scanner.getWebcam(webcam), 0, 0);
-  
+  image(scanner.crushWebcam(webcam), 0, 0);
+ 
   previewBox.makeIt();
   
   
