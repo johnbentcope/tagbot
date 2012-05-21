@@ -20,10 +20,8 @@ class Scanner {
   
   public PImage crushWebcam(PImage webcam) {
     webcam.loadPixels();
-    int len = pixels.length;
-    for ( int i = 0; i < webcam.pixels.length ; i++ ) {
-      webcam.pixels[i] = webcam.pixels[len - i];
-    }
+    int len = webcam.pixels.length;
+
     webcam.updatePixels();
     return webcam;
   }

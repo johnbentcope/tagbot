@@ -19,6 +19,7 @@ class Canvas {
   int dotsWide = fieldX/spacingX;
   int dotsHigh = fieldY/spacingY;
   
+  String orientation = "portrait";
   
   // Stuff. I don't know. It's declarations.
   Canvas ( int tempwide, int temphigh, int tempelevation ) {
@@ -37,6 +38,25 @@ class Canvas {
   
   private void stretchCanvas() {
     
+  }
+  
+  public String getOrientation() {
+    
+    return orientation;
+  }
+  
+  public boolean setOrientation( String newOrientation) {
+    orientation = newOrientation;
+    return true;
+  }
+  
+  public boolean flipOrientation() {
+    if (orientation == "landscape") {
+      orientation = "portrait";
+    } else {
+      orientation = "landscape";
+    }
+    return true;
   }
   
 }
