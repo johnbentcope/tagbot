@@ -56,4 +56,12 @@ class StateMachine {
     return true;
   }
   
+  public boolean helpText() {
+    fill(#FF0088);
+    textAlign(LEFT);
+    textFont(dillenia);
+    text("A - Preview\nS - Rotate Canvas\nMouse - Adjust Colors", 10, 25);
+    return true;  
+  }
+  
 }

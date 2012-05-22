@@ -55,7 +55,7 @@ void setup() {
   scanner = new Scanner();
   
   stateMachine = new StateMachine();
-  dillenia  = loadFont("DilleniaUPCBold-32.vlw");
+  dillenia  = loadFont("DilleniaUPCBold-27.vlw");
   creepster = loadFont("Creepster-Regular-48.vlw");
 
 }
@@ -87,6 +87,7 @@ void draw() {
   }
   stateMachine.makeLogo();
   stateMachine.displayState();
+  stateMachine.helpText();
 }
 
 void keyPressed() {
