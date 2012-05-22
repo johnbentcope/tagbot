@@ -18,6 +18,7 @@ class PreviewBox {
   }
   
   public void makeIt(String orientation){
+    noFill(); 
     if (orientation == "landscape") {
       rect(width/2, height/2, high, wide);
     } else {
