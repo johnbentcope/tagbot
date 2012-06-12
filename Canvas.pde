@@ -1,61 +1,58 @@
 class Canvas {
   
-  // These are in centimeters
+  // These are in inches
   // Approximately 2' by 3'
-  int wide = 60;
-  int high = 90;
+  int shortSide = 24;
+  int longSide = 36;
   
-  int elevation = 30;
+  int wideInches = shortSide;
+  int highInches = longSide;
   
   int spacingX = 4;
   int spacingY = 5;
   
-  int marginXmin = 4;
-  int marginYmin = 5;
+  int marginXmin = 2;
+  int marginYmin = 3;
   
-  int fieldX = wide-marginXmin*2;
-  int fieldY = high-marginYmin*2;
+  int fieldX = wideInches-marginXmin*2;
+  int fieldY = highInches-marginYmin*2;
   
-  int dotsWide = fieldX/spacingX;
-  int dotsHigh = fieldY/spacingY;
+  int dotsShort = 20;
+  int dotsLong = 30;
+  
+  int dotsWide = dotsShort;
+  int dotsHigh = dotsLong;
   
   String orientation = "portrait";
   
   // Stuff. I don't know. It's declarations.
-  Canvas ( int tempwide, int temphigh, int tempelevation ) {
-    wide = tempwide;
-    high = temphigh;
-    elevation = tempelevation;  //distance below motor horizonal paper begins
-  }
-  
-  public int getDotsWide() {
-    return dotsWide;
-  }
-  
-  public int getDotsHigh() {
-    return dotsHigh;
-  }
-  
-  private void stretchCanvas() {
-    
+  Canvas () {
   }
   
   public String getOrientation() {
-    
-    return orientation;
+    return "portrait";
+    //return orientation;
   }
   
   public boolean setOrientation( String newOrientation) {
-    orientation = newOrientation;
+    //orientation = newOrientation;
     return true;
   }
   
   public boolean flipOrientation() {
-    if (orientation == "landscape") {
+    /*if (orientation == "landscape") {
       orientation = "portrait";
+      wideInches = shortSide;
+      highInches = longSide;
+      dotsWide = dotsShort;
+      dotsHigh = dotsLong;
     } else {
       orientation = "landscape";
-    }
+      wideInches = longSide;
+      highInches = shortSide;
+      dotsWide = dotsLong;
+      dotsHigh = dotsShort;
+    }*/
     return true;
   }
   

@@ -4,18 +4,19 @@ import processing.video.*;
 /*** INSTANTIALIZINATE SOME OBJECTS ***/
 PImage imgBase;
 PImage imgScanned;
+PImage imgTiny;
 PFont creepster;
 PFont dillenia;
 Capture webcam;
 PreviewBox previewBox;
 Canvas canvas;
+Encoder encoder;
 Robot robot;
 Scanner scanner;
 StateMachine stateMachine;
 
 
-int prevMargin = 50; //makes setting margins simpler
-
+int prevMargin = 10; //makes setting margins simpler
 
 
 /*** Global vars... Probably too many of these
@@ -41,20 +42,30 @@ void setup() {
   }      
 
   imgBase = new PImage(width, height);
+  imgScanned = new PImage(width, height);
 
+  
   // PreviewBox ( int xMin, int yMin, int xMax, int yMax )
   previewBox = new PreviewBox(prevMargin, prevMargin, 
   width-prevMargin, height-prevMargin);
 
+
   // Canvas ( int tempwide, int temphigh, int tempelevation )
-  canvas = new Canvas(60, 90, 30);
+  canvas = new Canvas();
+
+  
+  imgTiny = new PImage(canvas.dotsWide, canvas.dotsHigh);
 
   // Robot ( int motorSpan, in numColors )
   robot = new Robot(500, 1);
 
   scanner = new Scanner();
   
+  encoder = new Encoder();
+  
   stateMachine = new StateMachine();
+  
+  
   dillenia  = loadFont("DilleniaUPCBold-27.vlw");
   creepster = loadFont("Creepster-Regular-48.vlw");
 
@@ -77,29 +88,54 @@ void draw() {
     case 0:
       image(imgBase, 0, 0);
       previewBox.makeIt(canvas.getOrientation());
+      //previewBox.makeIt("portrait");
       break;
     case 1:
-      image(scanner.crushWebcam(imgBase, previewBox),0 ,0 );
+      imgScanned = scanner.crushWebcam(imgBase, previewBox, canvas.getOrientation());
+      image( imgScanned, previewBox.xMin() , previewBox.yMin() );
+      //image(scanner.crushWebcam(imgBase, previewBox), 173, 20);
       previewBox.makeIt(canvas.getOrientation());
+      //previewBox.makeIt("portrait");
       break;
     case 2:
+      background(255);
+      image( imgScanned, previewBox.xMin() , previewBox.yMin() );
+      imgTiny = scanner.tinyMake( imgScanned , imgTiny, canvas );
+      //scanner.blobShow(scanner.crushWebcam(imgBase, previewBox));
+      break;     
+    case 3:
+      background(255);
+      image(imgTiny, 150, 200);
+      scanner.blobMake(imgTiny, previewBox, canvas);
+      break;
+    case 4:
+      encoder.gCodeify(imgTiny);
+      //exit;
       break;
   }
+  
   stateMachine.makeLogo();
   stateMachine.displayState();
   stateMachine.helpText();
+  
 }
 
 void keyPressed() {
   switch (key) {
     case 's' :
-      canvas.flipOrientation();
+      stateMachine.sButton(canvas);
       break;
     case 'a' :
       stateMachine.aButton();
       break;
     case 'd' :
       stateMachine.dButton();
+      break;
+    case 'c' :
+      stateMachine.cButton();
+      break;
+    case 'g' :
+      stateMachine.gButton();
       break;
   }
   

@@ -13,7 +13,7 @@ class StateMachine {
   }
   
   public boolean aButton() {
-    if ( state == 0 ) {
+    if ( state == 0 || state == 2 ) {
       state = 1;
       return true;
     } else {
@@ -22,9 +22,36 @@ class StateMachine {
     }
   }
   
-  public boolean dButton() {
-    state = 2;
+  public boolean sButton(Canvas canvas){
+    canvas.flipOrientation();
+    if (state == 2 ) {
+      state = 1;
+    }
     return true;
+    
+  }
+  
+  public boolean dButton() {
+    if (state != 0) {
+      state = 2;
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  public boolean cButton() {
+    state = 3;
+    return true;
+  }
+  
+  public boolean gButton() {
+    if (state == 3) {
+      state = 4;
+      return true;
+    } else {
+      return false;
+    }
   }
   
   public boolean makeLogo() {
@@ -45,10 +72,13 @@ class StateMachine {
         stateString = "Strike a pose!";
         break;
       case 1 :
-        stateString = "Preview";
+        stateString = "Super Cool Preview";
         break;
       case 2:
-        stateString = "State 3";
+        stateString = "Frozen";
+        break;
+      case 3:
+        stateString = "Rough Approximation";
         break;
     }
     

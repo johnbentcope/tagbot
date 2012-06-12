@@ -54,9 +54,7 @@ class PreviewBox {
       rect(0, yMin, xMin, yMax); //left
       rect(xMax, yMin, width, yMax); //right
     }
-    //print(high);
-    //println(wide);
-    
+    //println(xMax + "ffff"  );
     
   }
   
@@ -65,17 +63,23 @@ class PreviewBox {
   }
   
   public int xMax() {
-    return xMin;
+    return xMax;
   }
   
   public int yMin() {
-    return xMin;
+    return yMin;
   }
   
   public int yMax() {
-    return xMin;
+    return yMax;
   }
   
-
+  public int wide() {
+    return wide;
+  }
+  
+  public int high() {
+    return wide;
+  }
   
 }
